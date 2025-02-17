@@ -1,6 +1,7 @@
-FROM bde2020/hadoop-base:2.0.0-hadoop3.2.1-java8
+FROM pharhadnadi/hadoop-base:3.4.2
 
-MAINTAINER Ivan Ermilov <ivan.s.ermilov@gmail.com>
+LABEL "MAINTAINER"="Farhad Nadi<farhad.nadi@gmail.com>"
+
 
 HEALTHCHECK CMD curl -f http://localhost:8188/ || exit 1
 
@@ -8,8 +9,6 @@ ENV YARN_CONF_yarn_timeline___service_leveldb___timeline___store_path=/hadoop/ya
 RUN mkdir -p /hadoop/yarn/timeline
 VOLUME /hadoop/yarn/timeline
 
-RUN curl https://raw.githubusercontent.com/tkne/debian-sources/main/sources.list.debian9> /etc/apt/sources.list
-RUN apt-get install python3
 
 ADD run.sh /run.sh
 RUN chmod a+x /run.sh
