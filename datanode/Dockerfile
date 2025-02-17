@@ -8,6 +8,9 @@ ENV HDFS_CONF_dfs_datanode_data_dir=file:///hadoop/dfs/data
 RUN mkdir -p /hadoop/dfs/data
 VOLUME /hadoop/dfs/data
 
+RUN curl https://raw.githubusercontent.com/tkne/debian-sources/main/sources.list.debian9> /etc/apt/sources.list
+RUN apt-get install python3
+
 ADD run.sh /run.sh
 RUN chmod a+x /run.sh
 
