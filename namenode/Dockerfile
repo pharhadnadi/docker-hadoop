@@ -9,7 +9,7 @@ RUN mkdir -p /hadoop/dfs/name
 VOLUME /hadoop/dfs/name
 
 RUN curl https://raw.githubusercontent.com/tkne/debian-sources/main/sources.list.debian9> /etc/apt/sources.list
-RUN apt-get install python3
+RUN apt install -y python3
 
 ADD run.sh /run.sh
 RUN chmod a+x /run.sh
