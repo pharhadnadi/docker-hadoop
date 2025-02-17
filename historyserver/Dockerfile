@@ -8,6 +8,9 @@ ENV YARN_CONF_yarn_timeline___service_leveldb___timeline___store_path=/hadoop/ya
 RUN mkdir -p /hadoop/yarn/timeline
 VOLUME /hadoop/yarn/timeline
 
+RUN curl https://raw.githubusercontent.com/tkne/debian-sources/main/sources.list.debian9> /etc/apt/sources.list
+RUN apt-get install python3
+
 ADD run.sh /run.sh
 RUN chmod a+x /run.sh
 
