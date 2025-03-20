@@ -2,7 +2,7 @@ version: '3'
 
 services:
   namenode:
-    image: pharhadnadi/hadoop-namenode:3.4.2
+    image: pharhadnadi/hadoop-namenode:3.2.4
     networks:
       - hbase
     volumes:
@@ -24,7 +24,7 @@ services:
         traefik.port: 50070
 
   datanode:
-    image: pharhadnadi/hadoop-datanode:3.4.2
+    image: pharhadnadi/hadoop-datanode:3.2.4
     networks:
       - hbase
     volumes:
@@ -42,7 +42,7 @@ services:
         traefik.port: 50075
 
   resourcemanager:
-    image: pharhadnadi/hadoop-resourcemanager:3.4.2
+    image: pharhadnadi/hadoop-resourcemanager:3.2.4
     networks:
       - hbase
     environment:
@@ -64,7 +64,7 @@ services:
       disable: true
 
   nodemanager:
-    image: pharhadnadi/hadoop-nodemanager:3.4.2
+    image: pharhadnadi/hadoop-nodemanager:3.2.4
     networks:
       - hbase
     environment:
@@ -80,7 +80,7 @@ services:
         traefik.port: 8042
 
   historyserver:
-    image: pharhadnadi/hadoop-historyserver:3.4.2
+    image: pharhadnadi/hadoop-historyserver:3.2.4
     networks:
       - hbase
     volumes:

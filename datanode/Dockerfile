@@ -1,4 +1,4 @@
-FROM pharhadnadi/hadoop-base:3.4.2
+FROM pharhadnadi/hadoop-base:3.2.4
 
 LABEL "MAINTAINER"="Farhad Nadi<farhad.nadi@gmail.com>"
 
